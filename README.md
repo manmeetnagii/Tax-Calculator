@@ -30,9 +30,11 @@ Alternatively, Open the HTML file using a web browser. You can either right-clic
 ### Appearance
 
 #### Dark Mode
-![Screenshot (121)](https://github.com/manmeetnagii/TaxCalculator/assets/143264649/b4bb4b2a-51c8-4522-8654-3568d9c491a8)
+!
+![Screenshot (121)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/4fdc36d5-acc4-4a28-820a-7fe932df7478)
 #### Light Mode
-![Screenshot (122)](https://github.com/manmeetnagii/TaxCalculator/assets/143264649/01b10149-11cb-41d2-a5fd-c195ce9d5441)
+![Screenshot (122)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/35af9831-e5a8-49ab-927e-38547518de52)
+
 
 
 ### Test Cases (Assignment mentioned only)
@@ -40,28 +42,32 @@ Alternatively, Open the HTML file using a web browser. You can either right-clic
 #### Test Case : 1
 Do not restricting the user to enter incorrect values like characters and highlights an error icon to the right of the input field if user enters values other than number.
 
-![Screenshot (123)](https://github.com/manmeetnagii/TaxCalculator/assets/143264649/df41f238-d5d2-4ff7-b7a3-4392b5e3ea3e)
+
+![Screenshot (123)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/2af78fb1-d36d-4ecd-b5b0-ea8bad564c6d)
 
 #### Test Case : 2
 Showing help tooltip
+![Screenshot (126)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/65abad98-be14-49f6-ba56-071562ce7b8f)
 
-![Screenshot (126)](https://github.com/manmeetnagii/TaxCalculator/assets/143264649/6d98a1b0-0b85-4e8d-bd74-393e272a5297)
+
 
 #### Test Case : 3
 Error icons should not be visible in the form by default.
-![Screenshot (121)](https://github.com/manmeetnagii/TaxCalculator/assets/143264649/b4bb4b2a-51c8-4522-8654-3568d9c491a8)
+
+![Screenshot (121)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/63aaabff-6a5a-4b03-8e90-10587524ee4b)
 
 #### Test Case : 4
 If user has not entered the value of age group and clicks on submit, it will show an error icon hovering over which shows that input field is mandatory.
 
-![Screenshot (124)](https://github.com/manmeetnagii/TaxCalculator/assets/143264649/fbae375e-28f0-45f2-8ad1-cb1c60a9faae)
+![Screenshot (123)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/fd22c146-a81d-4b79-aa33-a9d13ea1b9ee)
 
 
 
 #### Test Case : 5
 Clicking on submit will show a modal which would show the final values based on the calculations.
+![Screenshot (125)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/6c28469e-ea5e-48ee-95bb-812260554cff)
 
-![Screenshot (125)](https://github.com/manmeetnagii/TaxCalculator/assets/143264649/44897738-8173-43c9-b321-398d7098f374)
+
 #### NOTE: Other test cases are answered in  FAQ section
 
 ## FAQ
