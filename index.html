@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tax Calculator</title>
+  </head>
+
+  <body>
+   <span class="div" onclick="toggleDarkMode()"><img id="toggleDarkMode" src="sun.png" alt="" ></span>
+    <div class="container" id="container">
+
+      <h1 id="heading">Tax Calculator</h1>
+
+      <!-- FORM -->
+      <form class="form-container" id="form-container">
+        <!-- INPUT FOR GROSS INCOME -->
+        <div class="input-container">
+          <div class="labels">
+            <label for="grossIncome" id="grossIncomeLabel">Enter gross annual income</label>
+
+            <!-- Help Tooltip -->
+            <div class="helpTooltip">
+              <span class="helpTooltiptext"
+                >Gross annual income is your total salary in a year before any
+                deductions</span
+              >
+              <span>
+                <span class="material-symbols-outlined"> help </span>
+              </span>
+            </div>
+          </div>
+          <div class="inputs"  >
+            <div class="input" id="grossIncomeInput">
+              <input
+                class="numericValue"
+                type="text"
+                id="grossIncome"
+                name="grossIncome"
+                placeholder="Enter gross annual income"
+                autocomplete="off"
+              />
+              <div class="alertTooltip" >
+                <span class="alertTooltiptext" id="grossIncomeAlertText"></span>
+                <span>
+                  <span class="material-symbols-outlined alertIcon" id="grossIncomeAlert"> error </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INPUT FOR EXTRA INCOME -->
+        <div class="input-container">
+          <div class="labels">
+            <label for="extraIncome" id="extraIncomeLabel">Enter extra income</label>
+            <div class="helpTooltip">
+              <span class="helpTooltiptext"
+                >Extra income refers to additional earnings obtained from
+                other sources.</span
+              >
+              <span class="helpIcon">
+                <span class="material-symbols-outlined"> help </span>
+              </span>
+            </div>
+          </div>
+          <div class="inputs">
+            <div class="input" id="extraIncomeInput">
+              <input
+                   class="numericValue"
+                type="text"
+                id="extraIncome"
+                name="extraIncome"
+                placeholder="Enter extra income from other sources"
+                autocomplete="off"
+              />
+              <div class="alertTooltip" >
+                <span class="alertTooltiptext" id="extraIncomeAlertText"></span>
+                <span>
+                  <span class="material-symbols-outlined alertIcon" id="extraIncomeAlert"> error </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INPUT FOR AGE GROUP -->
+        <div class="input-container">
+          <div class="labels">
+            <label for="ageGroup" id="ageGroupLabel">Age group</label>
+            <div class="helpTooltip">
+              <span class="helpTooltiptext"
+                >Age group is your age which falls between these
+                catagories.</span
+              >
+
+              <span>
+                <span class="material-symbols-outlined"> help </span>
+              </span>
+            </div>
+          </div>
+          <div class="inputs">
+            <div class="input" id="ageGroupInput">
+              <select name="ageGroup" id="ageGroup">
+                <option value="null"></option>
+                <option value="upto39">&lt; 40</option>
+                <option value="40to59">&ge; 40 & &lt 60</option>
+                <option value="above59">&ge; 60</option>
+              </select>
+              <div class="alertTooltip" >
+                <span class="alertTooltiptext" id="ageGroupAlertText">This input field is mandatory</span>
+                <span>
+                  <span class="material-symbols-outlined alertIcon" id="ageGroupAlert"> error </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INPUT FOR DEDUCTIONS -->
+        <div class="input-container">
+          <div class="labels">
+            <label for="deductions" id="deductionslabel">Enter total applicable deductions</label>
+            <div class="helpTooltip">
+              <span class="helpTooltiptext"
+                >Deductions may contain expenses that can be subtracted from
+                your total income</span
+              >
+              <span>
+                <span class="material-symbols-outlined"> help </span>
+              </span>
+            </div>
+          </div>
+          <div class="inputs">
+            <div class="input" id="deductionsInput">
+              <input
+                class="numericValue"
+                type="text"
+                id="deductions"
+                name="deductions"
+                placeholder="Add total applicable deductions"
+                autocomplete="off"
+              />
+              <div class="alertTooltip" >
+                <span class="alertTooltiptext"  id="deductionsAlertText"></span>
+                <span>
+                  <span class="material-symbols-outlined alertIcon" id="deductionsAlert"> error </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button" id="button" >Calculate</button>
+    </form>
+    
+
+      <!-- MODAL -->
+      <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <h3>Your overall income will be</h3>
+            <p id="taxAmount"></p>
+            <p>after tax deductions</p>
+            <p style=" margin-top: 1rem;">Total tax deducted = <span id="taxDeducted" style="color: red;"></span></p>
+            <div class="closeContainer"><button class="close" onclick="closeModal()">Close</button></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

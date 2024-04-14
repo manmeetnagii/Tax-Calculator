@@ -1,0 +1,579 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --warning-color: rgb(255, 46, 46);
+  --success-color: #2563eb;
+  --white-color: white;
+  --black-color: black;
+
+  /* Dark mode colors */
+  --background-color-dark: #0d1424;
+  --container-color-dark: #1b273a;
+  --bg-color-light: #2b3f5c;
+  --gray100-color-dark: rgb(202, 202, 202);
+  --gray200-color-dark: #8f8f8f;
+  --gray300-color-dark: rgb(184, 184, 184);
+  --gray400-color-dark: #161616;
+
+  /* Light mode colors */
+  --text-color-light: #000000;
+  --container-color-light: #1b273a;
+  --gray100-color-light: rgb(72, 72, 72);
+  --gray200-color-light: rgb(45, 45, 45);
+  --bg2-color-light: rgb(210, 210, 210);
+  --container-bg-color-light: #ececec;
+ 
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, .container, .form-container, .input-container, .modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-color-dark);
+  transition: 0.5s all ease;
+}
+
+body.light-mode {
+  color: var(--text-color-light);
+  background-color: var(--bg2-color-light);
+}
+
+#toggleDarkMode {
+  width: 3rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 15px 0px;
+  position: absolute;
+  top: 0;
+  right: 15rem;
+  cursor: pointer;
+}
+
+
+
+h1 {
+  font-size: 2.7rem;
+  color:var(--white-color);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.85rem;
+  font-weight: 600;
+}
+
+h1.light-mode {
+  color: var(--text-color-light);
+}
+
+.container {
+  width: 30%;
+  height: 90%;
+  justify-content: start;
+  background: var(--container-color-dark);
+  border-radius: 15px;
+  box-shadow: 0px 0px 27px 8px rgb(66, 96, 141);
+  padding: 1rem 0rem;
+  
+}
+
+.container.light-mode {
+  background: var(--container-bg-color-light);
+  box-shadow: 0px 0px 27px 8px rgb(99, 99, 99);
+}
+
+.form-container {
+  width: 100%;
+  height: 95%;
+  justify-content: start;
+  margin-top: 1rem;
+  gap: 2.5rem;
+
+}
+
+.input-container {
+  justify-content: center;
+  width: 90%;
+  
+}
+
+.labels {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+#grossIncomeLabel.light-mode,
+#extraIncomeLabel.light-mode,
+#ageGroupLabel.light-mode,
+#deductionslabel.light-mode {
+  color: var(--gray200-color-light);
+  font-weight: 600;
+}
+
+.labels label {
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--gray100-color-dark);
+}
+
+
+/* ---- CSS FOR HELP TOOL-TIP ---- */
+.helpTooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.helpTooltiptext {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  background-color: var(--gray400-color-dark);
+  font-size: 13px;
+  color: var(--gray100-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-align: center;
+  width: 15rem;
+  height: 4rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.helpTooltiptext::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%);
+  border: 10px solid;
+  border-color: var(--gray400-color-dark) #0000 #0000 #0000;
+}
+
+.helpTooltip:hover .helpTooltiptext {
+  top: -270%;
+  visibility: visible;
+  opacity: 1;
+}
+/* ----------------------------------------------- */
+
+.material-symbols-outlined {
+  color: var(--gray200-color-dark);
+  font-size: 21px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+
+.input {
+  height: 2.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;  
+  background: var(--bg-color-light);
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: var(--gray300-color-dark);
+  font-size: 15.5px;
+  font-weight: 300;
+}
+
+.input .numericValue,
+select {
+  background: var(--bg-color-light);
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+  color: var(--gray300-color-dark);
+  font-size: 15.5px;
+}
+
+.numericValue.invalid {
+  border: 1px solid var(--warning-color);
+}
+
+
+/* ---- CSS FOR LIGHT MODE ----*/
+#grossIncomeInput.light-mode,
+#extraIncomeInput.light-mode,
+#ageGroupInput.light-mode,
+#deductionsInput.light-mode {
+  background: var(--white-color);
+  color: var(--gray100-color-light);
+}
+
+#grossIncome.light-mode,
+#extraIncome.light-mode,
+#ageGroup.light-mode,
+#deductions.light-mode {
+  background: var(--white-color);
+  color: var(--gray100-color-light);
+}
+
+#grossIncome.light-mode::placeholder,
+#extraIncome.light-mode::placeholder,
+#ageGroup.light-mode::placeholder,
+#deductions.light-mode::placeholder {
+  background: var(--white-color);
+  color: var(--gray100-color-light);
+  font-weight: 500;
+}
+/* -------------------------------------- */
+
+
+/* ---- CSS FOR ALERT TOOL-TIP ---- */
+.alertTooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.alertTooltiptext {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  background-color: var(--gray400-color-dark);
+  font-size: 14px;
+  color: var(--gray100-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-align: center;
+  width: 15rem;
+  height: 4rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.alertTooltiptext::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%);
+  border: 10px solid;
+  border-color: var(--gray400-color-dark) #00000000 #00000000 #0000;
+}
+
+.alertTooltip:hover .alertTooltiptext {
+  top: -360%;
+  visibility: visible;
+  opacity: 1;
+}
+/* ----------------------------------------------- */
+
+.alertIcon {
+  color: var(--warning-color);
+  display: none;
+}
+
+.button {
+  width: 90%;
+  height: 3.2rem;
+  outline: none;  
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background: var(--success-color);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 1rem;
+  justify-content: center;
+  background-color: var(--white-color);
+  width: 40%;
+  height: 35%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#taxAmount {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--success-color);
+}
+
+.close {
+  outline: none;
+  border: none;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: var(--success-color);
+  color: var(--white-color);
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+#formValidationError {
+  color: var(--warning-color);
+  text-decoration: underline;
+  visibility: visible;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 0.5rem;
+}
+
+
+
+
+@media (max-width: 575.98px) {
+
+h1{
+  font-size: 1.7rem;
+}
+
+.labels label{
+  font-size: 14px;
+}
+
+#formValidationError{
+  font-size: 12px;
+}
+
+.material-symbols-outlined{
+  font-size: 17px;
+}
+
+.button{
+  font-size: 15px;
+}
+
+.input input::placeholder{
+  font-size: 13px;
+}
+
+  body{
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .container{
+    width: 80%;
+    height: 80%;
+    margin-top: 2rem;
+
+  }
+
+  .form-container{
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    margin-top: 1rem;
+    gap: 3rem;
+  }
+
+  #toggleDarkMode{
+    top: 0;
+    width: 3rem;
+    right: 1rem;
+  }
+  
+
+  .helpTooltiptext {
+    width: 8rem;
+    height: 9rem;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .helpTooltip:hover .helpTooltiptext {
+    top: -580%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .alertTooltiptext {
+    width: 8rem;
+    height: 4rem;
+  }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h1{
+    font-size: 2rem;
+  }
+  
+    body{
+      width: 100%;
+      height: 100%;
+    }
+  
+    .container{
+      width: 65%;
+      height: 90%;
+      margin-top: 4rem;
+    }
+
+    .labels label{
+      font-size: 1rem;
+    }
+  
+  .input input::placeholder{
+    font-size: 1rem;
+  }
+
+    .form-container{
+      width: 100%;
+      height: 90%;
+      justify-content: start;
+      margin-top: 1rem;
+      gap: 2rem;
+    }
+  
+    #toggleDarkMode{
+      top: 0;
+      width: 3rem;
+      right: 1rem;
+    }
+    
+  
+    
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  h1{
+    font-size: 1.5rem;
+  }
+  
+    body{
+      width: 100%;
+      height: 100vh;
+    }
+
+    .button{
+      height: 3rem;
+      font-size: 1rem;
+    }
+  
+    .container{
+      width: 40%;
+      height: 85%;
+      margin-top: 2rem;
+    }
+
+    .labels label{
+      font-size: 0.8rem;
+    }
+  
+  .input input::placeholder{
+    font-size: 0.8rem;
+  }
+
+    .form-container{
+      width: 100%;
+      height: 90%;
+      justify-content: start;
+      margin-top: 1rem;
+      gap: 2rem;
+    }
+  
+    #toggleDarkMode{
+      top: 0;
+      width: 3rem;
+      right: 1rem;
+    }
+    
+  
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  h1{
+    font-size: 1rem;
+  }
+  
+    body{
+      width: 100%;
+      height: 100vh;
+    }
+
+    .button{
+      height: 5rem;
+      font-size: 1rem;
+    }
+  
+    .container{
+      width: 40%;
+      height: 85%;
+      margin-top: 3rem;
+    }
+
+    .labels label{
+      font-size: 0.8rem;
+    }
+  
+  .input input::placeholder{
+    font-size: 0.8rem;
+  }
+
+    .form-container{
+      width: 100%;
+      height: 90%;
+      justify-content: start;
+      margin-top: 1rem;
+      gap: 2rem;
+    }
+  
+    #toggleDarkMode{
+      top: 0;
+      width: 3rem;
+      right: 1rem;
+    }
+    
+  
+   
+}
