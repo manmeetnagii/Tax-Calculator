@@ -13,7 +13,7 @@ Technologies used ![Static Badge](https://img.shields.io/badge/HTML-FF0000)
 1. Clone the project
 
 ```bash
-  git clone https://github.com/manmeetnagii/TaxCalculator
+  git clone [https://github.com/manmeetnagii/TaxCalculator](https://github.com/manmeetnagii/Tax-Calculator)
 ```
 
 2. No dependencies needed
