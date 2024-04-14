@@ -9,12 +9,12 @@ Technologies used ![Static Badge](https://img.shields.io/badge/HTML-FF0000)
 
 
 ## Run Locally
-https://github.com/manmeetnagii?tab=repositories
+
 
 1. Clone the project
 
 ```bash
-  [git clone [https://github.com/manmeetnagii/TaxCalculator](https://github.com/manmeetnagii/Tax-Calculator)](https://github.com/manmeetnagii?tab=repositories)
+  git clone https://github.com/manmeetnagii/Tax-Calculator.git
 ```
 
 2. No dependencies needed
