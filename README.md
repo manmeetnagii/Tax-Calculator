@@ -30,7 +30,7 @@ Alternatively, Open the HTML file using a web browser. You can either right-clic
 ### Appearance
 
 #### Dark Mode
-!
+
 ![Screenshot (121)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/4fdc36d5-acc4-4a28-820a-7fe932df7478)
 #### Light Mode
 ![Screenshot (122)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/35af9831-e5a8-49ab-927e-38547518de52)
