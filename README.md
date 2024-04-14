@@ -1,7 +1,7 @@
 
 # Tax Calculator
 
-A straightforward tax calculator that computes the net income after deducting taxes.
+A straightforward tax calculator that computes the tax and net income after deducting taxes.
 
 Technologies used ![Static Badge](https://img.shields.io/badge/HTML-FF0000) 
 ![Static Badge](https://img.shields.io/badge/CSS-0000FF)
