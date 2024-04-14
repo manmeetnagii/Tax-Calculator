@@ -48,6 +48,7 @@ Do not restricting the user to enter incorrect values like characters and highli
 
 #### Test Case : 2
 Showing help tooltip
+
 ![Screenshot (126)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/65abad98-be14-49f6-ba56-071562ce7b8f)
 
 
@@ -58,7 +59,7 @@ Error icons should not be visible in the form by default.
 ![Screenshot (121)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/63aaabff-6a5a-4b03-8e90-10587524ee4b)
 
 #### Test Case : 4
-If user has not entered the value of age group and clicks on submit, it will show an error icon hovering over which shows that input field is mandatory.
+If user has not selected the value of age group and clicks on submit, it will show an error icon hovering over which shows that input field is mandatory.
 
 ![Screenshot (123)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/fd22c146-a81d-4b79-aa33-a9d13ea1b9ee)
 
@@ -66,6 +67,7 @@ If user has not entered the value of age group and clicks on submit, it will sho
 
 #### Test Case : 5
 Clicking on submit will show a modal which would show the final values based on the calculations.
+
 ![Screenshot (125)](https://github.com/manmeetnagii/Tax-Calculator/assets/143264649/6c28469e-ea5e-48ee-95bb-812260554cff)
 
 
