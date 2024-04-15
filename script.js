@@ -222,8 +222,8 @@ handleInputValues();
 // toggles between dark/light mode icons
 document.addEventListener("DOMContentLoaded", function () {
   const darkLightModeIcon = document.getElementById("toggleDarkMode");
-  const sun = "sun.png";
-  const moon = "moon.png";
+  const sun = "sun.webp";
+  const moon = "moon.webp";
 
   let isDark = true;
 
